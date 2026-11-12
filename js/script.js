@@ -27,7 +27,7 @@ setContraste(ler("contraste") === "1");
 
 /* ---------- Dados fictícios: [código, nome, preço, variação %] ---------- */
 const dados = {
-  acoes: [["PETR4","Petrobras",38.2,1.2],["VALE3","Vale",62.4,-0.8],["ITUB4","Itaú Unibanco",33.1,0.5],["WEGE3","WEG",45.7,2.1],["BBAS3","Banco do Brasil",15.60,-7.64],["MGLU3","Magazine Luiza",9.4,3.4]],
+  acoes: [["PETR4","Petrobras",38.2,1.2],["VALE3","Vale",62.4,-0.8],["ITUB4","Itaú Unibanco",33.1,0.5],["WEGE3","WEG",45.7,2.1],["BBAS3","Banco do Brasil",15.60,-7.6],["MGLU3","Magazine Luiza",9.4,3.4]],
   fiis: [["MXRF11","Maxi Renda",10.1,0.4],["HGLG11","CSHG Logística",158.3,-0.2],["KNRI11","Kinea Renda",142.6,0.1],["XPML11","XP Malls",109.8,0.9]],
   criptos: [["BTC","Bitcoin",350000,-2.1],["ETH","Ethereum",17500,1.6],["SOL","Solana",820,4.2]]
 };
