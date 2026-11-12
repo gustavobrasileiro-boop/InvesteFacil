@@ -1,10 +1,80 @@
-   <!DOCTYPE html>
-   <html lang="pt-br">
-   <head>
-     <meta charset="UTF-8">
-     <title>InvesteFacil</title>
-   </head>
-   <body>
-     <h1>InvesteFacil - site no ar!</h1>
-   </body>
-   </html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InvesteFácil – Aprenda a investir</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<header class="top">
+  <a class="logo" href="index.html">Investe<b>Fácil</b></a>
+  <nav aria-label="Principal">
+    <a href="#mercado">Mercado</a>
+    <a href="#aprenda">Aprenda</a>
+    <a href="#contato">Contato</a>
+    <a href="login.html">Entrar</a>
+  </nav>
+  <div class="a11y" role="group" aria-label="Acessibilidade">
+    <button id="fMenos" aria-label="Diminuir fonte">A-</button>
+    <button id="fMais" aria-label="Aumentar fonte">A+</button>
+    <button id="contraste" aria-pressed="false">Alto contraste</button>
+    <button id="tema" aria-pressed="false">Modo escuro</button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-label="Destaques">
+    <div class="carousel" id="carousel">
+      <div class="slide ativo"><h1>Investir começa com entender</h1><p>Guias simples sobre ações, fundos imobiliários e criptomoedas.</p></div>
+      <div class="slide"><h2>Acompanhe o mercado</h2><p>Veja cotações de exemplo e pesquise por código ou nome.</p></div>
+      <div class="slide"><h2>Dividendos, explicados</h2><p>Aprenda como as empresas repartem lucro com você.</p></div>
+      <div class="ctrl">
+        <button id="prev" aria-label="Slide anterior">‹</button>
+        <span id="pos" aria-live="polite">1 / 3</span>
+        <button id="next" aria-label="Próximo slide">›</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="mercado" class="sec">
+    <h2>Mercado</h2>
+    <p class="aviso">Valores fictícios, apenas para fins de estudo. Não são recomendação de investimento.</p>
+    <div class="tabs" role="tablist" aria-label="Categorias">
+      <button role="tab" aria-selected="true" data-aba="acoes">Ações</button>
+      <button role="tab" aria-selected="false" data-aba="fiis">FIIs</button>
+      <button role="tab" aria-selected="false" data-aba="criptos">Criptomoedas</button>
+    </div>
+    <label for="busca">Pesquisar por código ou nome</label>
+    <input type="search" id="busca" placeholder="Ex.: PETR4">
+    <div class="grid" id="cards" role="tabpanel" aria-live="polite"></div>
+  </section>
+
+  <section id="aprenda" class="sec">
+    <h2>Aprenda</h2>
+    <div class="grid">
+      <article class="card"><h3>O que é dividendo?</h3><p>Parte do lucro de uma empresa paga aos acionistas, geralmente em dinheiro.</p></article>
+      <article class="card"><h3>O que é P/L?</h3><p>Relação entre o preço da ação e o lucro por ação. Ajuda a comparar se uma ação está cara ou barata.</p></article>
+      <article class="card"><h3>O que é um FII?</h3><p>Fundo que reúne dinheiro de vários investidores para aplicar em imóveis e distribui aluguéis todo mês.</p></article>
+    </div>
+  </section>
+
+  <section id="contato" class="sec">
+    <h2>Contato</h2>
+    <form id="formContato" novalidate>
+      <label for="nome">Nome</label>
+      <input id="nome" name="nome" required autocomplete="name">
+      <label for="email">E-mail</label>
+      <input id="email" name="email" type="email" required autocomplete="email">
+      <label for="msg">Mensagem</label>
+      <textarea id="msg" name="msg" rows="4" required></textarea>
+      <button type="submit" class="btn">Enviar mensagem</button>
+      <p id="retorno" role="status"></p>
+    </form>
+  </section>
+</main>
+
+<footer class="rodape">
+  <p>© 2026 InvesteFácil – Projeto de Desenvolvimento de
