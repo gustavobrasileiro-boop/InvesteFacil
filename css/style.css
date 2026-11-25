@@ -75,5 +75,12 @@ input,textarea{width:100%;max-width:520px;padding:.6rem;border:1px solid var(--m
  .cols{grid-template-columns:1fr}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
-
+#aprenda .grid{align-items:start}
+.trilha{list-style:none;margin:0 0 1rem;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.8rem;counter-reset:p}
+.trilha li{counter-increment:p;border:1px solid var(--bd);border-radius:12px;padding:.8rem;background:var(--card)}
+.trilha li::before{content:counter(p);display:inline-grid;place-items:center;width:1.6rem;height:1.6rem;border-radius:50%;background:var(--acc);color:var(--onacc);font-weight:700;margin-right:.5rem}
+details.card summary{cursor:pointer;font-weight:700;list-style:none}
+details.card summary::-webkit-details-marker{display:none}
+details.card summary::after{content:"+";float:right;color:var(--acc);font-weight:700}
+details.card[open] summary::after{content:"−"}
 
