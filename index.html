@@ -8,10 +8,11 @@
 </head>
 <body>
 <a class="skip" href="#main">Pular para o conteúdo</a>
-
-<header class="top">
+<div class="app">
+<aside class="side">
   <a class="logo" href="index.html">Investe<b>Fácil</b></a>
   <nav aria-label="Principal">
+    <a class="on" href="#inicio" aria-current="page">Início</a>
     <a href="#mercado">Mercado</a>
     <a href="#aprenda">Aprenda</a>
     <a href="#contato">Contato</a>
@@ -23,14 +24,19 @@
     <button id="contraste" aria-pressed="false">Alto contraste</button>
     <button id="tema" aria-pressed="false">Modo escuro</button>
   </div>
-</header>
+</aside>
 
-<main id="main">
-  <section class="hero" aria-label="Destaques">
-    <div class="carousel" id="carousel">
-      <div class="slide ativo"><h1>Investir começa com entender</h1><p>Guias simples sobre ações, fundos imobiliários e criptomoedas.</p></div>
+<main class="main" id="main">
+  <header id="inicio">
+    <h1 class="ola">Olá, investidor!</h1>
+    <p class="mut">Aprenda a investir com exemplos simples e sem jargão.</p>
+  </header>
+
+  <section class="panel hero" aria-label="Destaques">
+    <div id="carousel">
+      <div class="slide ativo"><h2>Investir começa com entender</h2><p>Guias simples sobre ações, fundos imobiliários e criptomoedas.</p></div>
       <div class="slide"><h2>Acompanhe o mercado</h2><p>Veja cotações de exemplo e pesquise por código ou nome.</p></div>
-      <div class="slide"><h2>Dividendos, explicados</h2><p>Aprenda como as empresas repartem lucro com você.</p></div>
+      <div class="slide"><h2>Dividendos, explicados</h2><p>Aprenda como as empresas repartem o lucro com você.</p></div>
       <div class="ctrl">
         <button id="prev" aria-label="Slide anterior">‹</button>
         <span id="pos" aria-live="polite">1 / 3</span>
@@ -39,7 +45,32 @@
     </div>
   </section>
 
-  <section id="mercado" class="sec">
+  <div class="cols">
+    <section class="panel" aria-label="Carteira de exemplo">
+      <h2>Carteira de exemplo</h2>
+      <p class="valor">R$ 220.360,00 <small class="up">▲ 1,6%</small></p>
+      <div class="stats">
+        <div><span>Empresas</span><b>26</b></div>
+        <div><span>Saldo em caixa</span><b>R$ 10.250</b></div>
+        <div><span>Aportes previstos</span><b>R$ 7.000</b></div>
+      </div>
+      <div id="grafico"></div>
+    </section>
+    <section class="panel" aria-label="Distribuição da carteira">
+      <h2>Distribuição</h2>
+      <div class="donutbox">
+        <div class="donut" role="img" aria-label="Ações 45%, FIIs 20%, ETFs 25%, Cripto 10%"></div>
+        <ul class="leg">
+          <li><i style="background:var(--c1)"></i>Ações 45%</li>
+          <li><i style="background:var(--c2)"></i>FIIs 20%</li>
+          <li><i style="background:var(--c3)"></i>ETFs 25%</li>
+          <li><i style="background:var(--c4)"></i>Cripto 10%</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <section id="mercado" class="panel">
     <h2>Mercado</h2>
     <p class="aviso">Valores fictícios, apenas para fins de estudo. Não são recomendação de investimento.</p>
     <div class="tabs" role="tablist" aria-label="Categorias">
@@ -52,7 +83,7 @@
     <div class="grid" id="cards" role="tabpanel" aria-live="polite"></div>
   </section>
 
-  <section id="aprenda" class="sec">
+  <section id="aprenda" class="panel">
     <h2>Aprenda</h2>
     <div class="grid">
       <article class="card"><h3>O que é dividendo?</h3><p>Parte do lucro de uma empresa paga aos acionistas, geralmente em dinheiro.</p></article>
@@ -61,7 +92,7 @@
     </div>
   </section>
 
-  <section id="contato" class="sec">
+  <section id="contato" class="panel">
     <h2>Contato</h2>
     <form id="formContato" novalidate>
       <label for="nome">Nome</label>
@@ -74,12 +105,13 @@
       <p id="retorno" role="status"></p>
     </form>
   </section>
-</main>
 
-<footer class="rodape">
+  <footer class="rodape">
     <p>© 2026 InvesteFácil – Projeto de Desenvolvimento de Interfaces</p>
-  <p>Conteúdo educacional. Não é recomendação de investimento.</p>
-</footer>
+    <p>Conteúdo educacional. Não é recomendação de investimento.</p>
+  </footer>
+</main>
+</div>
 <script src="js/script.js"></script>
 </body>
 </html>

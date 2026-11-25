@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entrar – InvesteFácil</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topo">
+  <a class="logo" href="index.html">Investe<b>Fácil</b></a>
+  <div class="a11y" role="group" aria-label="Acessibilidade">
+    <button id="fMenos" aria-label="Diminuir fonte">A-</button>
+    <button id="fMais" aria-label="Aumentar fonte">A+</button>
+    <button id="contraste" aria-pressed="false">Alto contraste</button>
+    <button id="tema" aria-pressed="false">Modo escuro</button>
+  </div>
+</header>
+<main class="centro" id="main">
+  <section class="panel">
+    <h1 class="ola">Entrar</h1>
+    <p class="mut">Acesse sua conta (login simulado, sem servidor).</p>
+    <form id="formLogin" novalidate>
+      <label for="lemail">E-mail</label>
+      <input id="lemail" type="email" required autocomplete="email">
+      <label for="lsenha">Senha</label>
+      <input id="lsenha" type="password" required autocomplete="current-password">
+      <button type="submit" class="btn">Entrar</button>
+      <p id="retorno" role="status"></p>
+    </form>
+    <p><a href="index.html">Voltar para o início</a></p>
+  </section>
+</main>
+<script src="js/script.js"></script>
+</body>
+</html>
